@@ -1,0 +1,14 @@
+spin_version = "1"
+authors = ["Palash Nigam <npalash25@gmail.com>"]
+description = ""
+name = "advent-challange-1"
+trigger = { type = "http", base = "/" }
+version = "0.1.0"
+
+[[component]]
+id = "advent-challange-1"
+source = "target/wasm32-wasi/release/advent_challange_1.wasm"
+[component.trigger]
+route = "/..."
+[component.build]
+command = "cargo build --target wasm32-wasi --release"
